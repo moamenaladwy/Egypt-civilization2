@@ -1,0 +1,1151 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+/* body */
+/* التأثيرات والتنسيق لعناصر الجسم */
+body {
+    font-family: 'Arial', sans-serif; /* تحديد نوع الخط */
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* تدرج لوني جميل من اليسار لليمين */
+    color: #333; /* لون النص */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh; /* التأكد من أن الجسم يملأ كامل ارتفاع الشاشة */
+    transition: background-color 0.5s ease; /* تأثير التغيير السلس على الخلفية عند التفاعل */
+    
+}
+
+/* تأثيرات الحركة عند المرور فوق الجسم */
+body:hover {
+    background: linear-gradient(to right, #a6c1ee, #fbc2eb); /* تغيير التدرج اللوني عند المرور */
+    color: #ffffff; /* تغيير لون النص عند المرور */
+}
+
+/* تأثيرات النصوص في الجسم */
+h1, h2, h3, p {
+    transition: transform 0.3s ease, color 0.3s ease; /* تأثير حركي للنصوص */
+}
+
+/* تأثير التحريك للنصوص عند التفاعل */
+h1:hover, h2:hover, h3:hover, p:hover {
+    transform: translateY(-5px); /* تحريك النص للأعلى */
+    color: #ff6600; /* تغيير اللون عند المرور فوق النص */
+}
+
+/* إضافة تأثير الظلال للنصوص */
+body {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* إضافة ظلال خفيفة حول الصفحة */
+}
+
+/* إضافة تأثيرات الظلال للصور */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير على الصورة عند المرور */
+    border-radius: 10px;
+}
+
+/* تأثير الظلال والتحريك للصورة عند المرور */
+img:hover {
+    transform: scale(1.05); /* تكبير الصورة قليلاً عند المرور فوقها */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* إضافة ظلال قوية عند المرور فوق الصورة */
+}
+
+/* إذا كنت تريد تأثير متدرج ألوان خلفية عند تحميل الصفحة */
+@keyframes gradient-animation {
+    0% {
+        background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    }
+    50% {
+        background: linear-gradient(to right, #a6c1ee, #fbc2eb);
+    }
+    100% {
+        background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    }
+}
+
+/* تفعيل تأثير الحركة على الخلفية */
+body {
+    animation: gradient-animation 5s ease infinite; /* تأثير متدرج على الخلفية يستمر للأبد */
+}
+
+/* تخصيص شريط التنقل */
+.navbar.custom-navbar {
+    background-color: #4a6d7c; /* لون خلفية هادئ يميل للأزرق الداكن مع لمسة من الأخضر */
+    padding: 12px 20px; /* مساحة داخلية متوازنة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة تأثير الظل بشكل ناعم */
+    z-index: 1000; /* ضمان أن الشريط في الأعلى */
+    transition: background-color 0.3s ease; /* تأثير انتقال عند التمرير */
+  }
+  
+  /* تخصيص الشريط الثابت في الأعلى */
+  .navbar.custom-navbar.fixed-top {
+    position: fixed; /* يثبت الشريط في أعلى الصفحة */
+    top: 0; /* يجعل الشريط عند أعلى الصفحة */
+    left: 0;
+    width: 100%;
+    transition: background-color 0.3s ease; /* تأثير تغيير اللون */
+  }
+  
+  /* تخصيص الشعار */
+  .navbar .navbar-brand {
+    font-size: 1.8rem; /* حجم الشعار بشكل متوسط */
+    font-weight: 600;
+    color: #f8f9fa; /* لون الشعار (أبيض ناعم) */
+    letter-spacing: 1px; /* التباعد بين الحروف */
+    text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
+    transition: color 0.3s ease; /* تأثير عند التمرير */
+  }
+  
+  /* تفاعل مع الشعار عند المرور عليه */
+  .navbar .navbar-brand:hover {
+    color: #f1c40f; /* تغيير اللون عند التمرير (ذهبي هادئ) */
+  }
+  
+  /* تخصيص الروابط */
+  .navbar .navbar-nav .nav-link {
+    font-size: 1.1rem; /* حجم النص مناسب */
+    color: #ecf0f1; /* لون النص الفاتح (أبيض مائل للفضي) */
+    padding: 10px 20px; /* مسافة داخلية متوازنة */
+    transition: background-color 0.3s, color 0.3s; /* تأثير عند التمرير */
+    border-radius: 25px; /* حواف دائرية للروابط */
+  }
+  
+  /* تخصيص تفاعل الروابط */
+  .navbar .navbar-nav .nav-link:hover {
+    background-color: #f39c12; /* اللون البرتقالي عند التمرير */
+    color: #fff; /* تغيير اللون إلى الأبيض */
+  }
+  
+  /* تخصيص الرابط النشط */
+  .navbar .navbar-nav .nav-item.active .nav-link {
+    color: #f39c12; /* لون الرابط النشط */
+    font-weight: bold;
+  }
+  
+  /* تخصيص القائمة المنسدلة */
+  .navbar .dropdown-menu {
+    background-color: #34495e; /* خلفية داكنة للقائمة المنسدلة */
+    border-radius: 10px; /* حواف دائرية للقائمة المنسدلة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير الظل للقائمة */
+  }
+  
+  /* تخصيص العناصر داخل القائمة المنسدلة */
+  .navbar .dropdown-item {
+    color: #ecf0f1; /* لون النص داخل القائمة المنسدلة */
+    padding: 10px 20px; /* مسافة داخلية مناسبة */
+    font-size: 1rem; /* حجم نص مناسب */
+    transition: background-color 0.3s, color 0.3s; /* تأثير عند التمرير */
+  }
+  
+  /* تخصيص تفاعل العناصر داخل القائمة المنسدلة */
+  .navbar .dropdown-item:hover {
+    background-color: #f39c12; /* تغيير اللون عند التمرير */
+    color: #fff; /* تغيير النص إلى الأبيض */
+  }
+  
+  /* تخصيص أيقونة التبديل (للشاشات الصغيرة) */
+  .navbar-toggler-icon {
+    background-color: #ecf0f1; /* لون الأيقونة ليناسب التصميم */
+  }
+  
+  /* تخصيص حقل البحث */
+  .navbar .form-control {
+    border-radius: 20px; /* حواف دائرية جميلة */
+    padding: 12px 18px; /* مسافة داخلية مناسبة */
+    border: 1px solid #bdc3c7; /* إطار خفيف حول خانة البحث */
+    background-color: #ecf0f1; /* خلفية فاتحة لملف البحث */
+    color: #2c3e50; /* لون النص داخل خانة البحث */
+  }
+  
+  /* تخصيص الزر */
+  .navbar .btn-outline-light {
+    border-radius: 20px;
+    padding: 8px 20px;
+    border-color: #f39c12;
+    color: #f39c12;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* تأثير عند التمرير */
+  }
+  
+  /* تخصيص تفاعل الزر */
+  .navbar .btn-outline-light:hover {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  
+  /* تخصيص العناصر في الشاشات الصغيرة */
+  @media (max-width: 991px) {
+    .navbar .navbar-nav .nav-link {
+      font-size: 1rem; /* تقليص حجم النص في الأجهزة الصغيرة */
+    }
+  
+    .navbar .navbar-brand {
+      font-size: 1.6rem; /* تقليص حجم الشعار في الأجهزة الصغيرة */
+    }
+  }
+  
+  
+  
+  
+  
+
+
+.carousel-inner .carousel-item{
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+.carousel-inner .carousel-item img{
+    height: 100vh;
+    
+}
+#harm1{
+    text-align: center;
+}
+.card-title{
+    text-align: center;
+}
+.card-text{
+    text-align: center;
+}
+/* الحاوية الرئيسية */
+.container.oofo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  /* تنسيق الكروت */
+  .card {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden; /* لضمان أن الصور داخل الكارت تكون مقطوعة بشكل صحيح */
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* الحفاظ على توازن الصورة داخل الكارت */
+    border-bottom: 5px solid #ff6600; /* إضافة خط مميز أسفل الصورة */
+  }
+  
+  .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية مظللة مع شفافية */
+    color: white;
+    padding: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  
+  .card-title {
+    font-size: 2em;
+    margin: 0;
+    font-family: 'GE Dinar Two Medium', Arial, sans-serif;
+    letter-spacing: 1px;
+    color: #ff6600; /* لون العنوان */
+  }
+  
+  .card-text {
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+  
+  /* تنسيق العناوين */
+  .section-title {
+    font-size: 2em;
+    color: #333;
+    text-align: right;
+    margin: 20px 0;
+    font-family: 'GE Dinar Two', Arial, sans-serif;
+    border-bottom: 2px solid #ff6600; /* خط أسفل العنوان */
+    padding-bottom: 5px;
+  }
+  
+  /* تنسيق الفقرات */
+  .poof p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+    text-align: right;
+    margin-bottom: 20px;
+    padding-right: 10px;
+  }
+  
+  .poof p:hover {
+    color: #ff6600; /* تغيير اللون عند التمرير */
+    background-color: #fff4e5;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* تحسين المسافات داخل الفقرات */
+  .poof p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* إضافة تأثيرات على الحاويات بشكل عام */
+  .poof {
+    background-color: #f4f4f4; /* خلفية فاتحة للمحتوى */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+  }
+  
+  /* تحسين عرض الصور في الهواتف المحمولة */
+  @media (max-width: 768px) {
+    .card-img {
+      height: 200px;
+    }
+    .card-title {
+      font-size: 1.5em;
+    }
+    .section-title {
+      font-size: 1.6em;
+    }
+    .poof p {
+      font-size: 1em;
+    }
+  }
+  
+
+  
+
+
+
+.Paris{
+    color: #141111;
+}
+.ahram{
+    color: #0f0f10;
+
+}
+/* تنسيق الحاوية العامة */
+.container.parg {
+    max-width: 900px; /* تحديد أقصى عرض للحاوية */
+    margin: 0 auto; /* توسيط المحتوى */
+    padding: 30px;
+    background-color: #f4f4f4; /* خلفية فاتحة */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+}
+
+/* تنسيق العنوان */
+.pa1 {
+    font-family: "GE Dinar Two Medium", Arial, sans-serif; /* استخدام خط مناسب */
+    font-size: 2.5em; /* حجم خط كبير لجذب الانتباه */
+    color: #333; /* لون داكن للنص */
+    padding-bottom: 10px; /* إضافة مسافة أسفل العنوان */
+    margin: 0;
+    text-align: right; /* محاذاة العنوان لليمين */
+    border-bottom: 3px solid #ff6600; /* خط أسفل العنوان بلون مميز */
+    letter-spacing: 1px; /* زيادة التباعد بين الحروف */
+}
+
+/* تنسيق الفقرات */
+.pa2 {
+    font-family: "GE Dinar Two", Arial, sans-serif; /* استخدام نفس الخط للنصوص */
+    font-size: 1.2em; /* حجم خط مناسب للنصوص */
+    color: #444; /* لون النصوص */
+    line-height: 1.8; /* زيادة المسافة بين الأسطر لتحسين القراءة */
+    text-align: right; /* محاذاة النصوص لليمين */
+    padding: 10px 0; /* إضافة مسافة بين الفقرات */
+    margin: 0;
+}
+
+/* تأثير hover على الفقرات */
+.pa2:hover {
+    color: #ff6600; /* تغيير اللون إلى البرتقالي عند التمرير */
+    background-color: #fff4e5; /* خلفية خفيفة عند التمرير */
+    padding-right: 15px; /* إضافة مسافة إضافية عند التمرير */
+    transition: all 0.3s ease-in-out; /* تأثير انسيابي للتغيير */
+}
+
+/* تحسين المسافات والتباعد داخل الحاوية */
+.container.parg p:last-child {
+    margin-bottom: 0; /* إزالة المسافة بعد آخر فقرة */
+}
+
+.container.parg p {
+    margin-bottom: 20px; /* إضافة مسافة بين الفقرات */
+}
+
+
+.remk{
+    /* text-align: end; */
+    text-align: center;
+  font-size: 20px
+}
+/* تنسيق الحاوية العامة */
+.links {
+    text-align: right; /* محاذاة النص إلى اليمين */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #bba293;    /* لون خلفية هادئ */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* إضافة ظلال خفيفة */
+}
+
+.links h3 {
+    font-size: 1.5em; /* زيادة حجم الخط */
+    color: #333; /* لون دافئ للنص */
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #ff6600; /* إضافة خط أسفل العنوان */
+    padding-bottom: 10px;
+}
+
+/* تنسيق القائمة */
+.links ul {
+    list-style: none; /* إزالة النقاط من القائمة */
+    padding: 0;
+    margin: 0;
+}
+
+/* تنسيق العناصر داخل القائمة */
+.links li {
+    margin-bottom: 12px; /* إضافة مسافة بين العناصر */
+}
+
+/* تنسيق الروابط */
+.links a {
+    text-decoration: none; /* إزالة الخط تحت الرابط */
+    color: #333; /* اللون الأساسي للنص */
+    font-size: 1.1em; /* حجم الخط أكبر قليلًا */
+    transition: all 0.3s ease-in-out; /* تأثير انسيابي عند المرور على الرابط */
+    display: inline-block; /* جعل الرابط ككتلة قابل للضغط */
+    padding: 5px 0; /* إضافة مسافة داخلية */
+}
+
+/* تأثير hover على الروابط */
+.links a:hover {
+    color: #ff6600; /* تغيير اللون عند المرور */
+    border-bottom: 2px solid #ff6600; /* إضافة خط تحت الرابط */
+    padding-bottom: 8px; /* زيادة المسافة أسفل الرابط لإعطاء تأثير أكبر */
+}
+
+/* تحسين التباعد */
+.links li:last-child {
+    margin-bottom: 0; /* إزالة المسافة بعد العنصر الأخير */
+}
+
+.harm img{
+    transition: .3s;
+}
+.harm img:hover{
+    transform: scale(.9);
+}
+.parg2 {
+    text-align: right; /* محاذاة النص لليمين بشكل مناسب */
+    padding: 20px 40px; /* زيادة الهوامش لجعل المحتوى مريحًا */
+    line-height: 1.8; /* تحسين تباعد الأسطر لقراءة أسهل */
+    font-size: 18px; /* تحديد حجم الخط ليكون مناسبًا */
+    font-family: 'Arial', sans-serif; /* خط مناسب للقراءة */
+    color: #333; /* لون نص مظلل قليلاً للراحة */
+    border-radius: 8px; /* حواف دائرية للجسم */
+    margin-bottom: 40px; /* إضافة هامش أسفل الفقرة */
+    text-decoration: none;
+    
+}
+
+.parg2 h1 {
+    font-size: 28px; /* حجم أكبر للعناوين */
+    color: #222; /* لون أغمق للعناوين */
+    margin-bottom: 20px; /* مسافة أسفل العنوان */
+    font-family: 'Georgia', serif; /* خط فخم للعناوين */
+}
+
+.parg2 h4 {
+    font-size: 22px; /* حجم جيد للعناوين الفرعية */
+    color: #ff6600; /* لون برتقالي مميز للعناوين الفرعية */
+    margin-bottom: 15px; /* مسافة أسفل العنوان الفرعي */
+    font-family: 'Georgia', serif; /* خط مشابه للعناوين ولكن بلون مختلف */
+}
+
+.parg2 p {
+    text-align: justify; /* محاذاة النص بطريقة تساوي المسافات */
+    margin-bottom: 15px; /* مسافة بين الفقرات */
+    font-size: 18px; /* حجم النص داخل الفقرات */
+    color: #555; /* نص داكن قليلاً لزيادة وضوح القراءة */
+    text-align: right;
+}
+
+.video-container {
+    margin: 30px 0; /* هامش حول الفيديو */
+    text-align: center; /* محاذاة الفيديو في المنتصف */
+}
+
+video {
+    width: 100%; /* تعيين عرض الفيديو ليكون متجاوبًا */
+    max-width: 800px; /* الحد الأقصى للعرض */
+    border-radius: 8px; /* حواف دائرية للفيديو */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف حول الفيديو */
+}
+
+video:focus {
+    outline: none; /* إزالة الإطار عند التركيز على الفيديو */
+}
+
+
+  /* تنسيق السهم */
+  .rimx {
+    font-size: 40px; /* حجم السهم */
+    position: fixed; /* جعل السهم ثابت بالنسبة للشاشة */
+    bottom: 25px; /* المسافة من الأسفل */
+    right: 25px; /* المسافة من اليمين */
+    cursor: pointer; /* تغيير المؤشر ليصبح يد عند المرور على السهم */
+    transition: transform 0.3s; /* إضافة تأثير عند تحريك السهم */
+  }
+
+  .rimx:hover {
+    transform: scale(1.4); /* تكبير السهم عند المرور عليه */
+  }
+ /* معابد */
+  .temples {
+    text-align: center; 
+    padding: 40px 20px; 
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.temples h1 {
+    font-size: 36px;
+    color: #2C3E50;
+    margin-bottom: 40px;
+    font-family: 'Georgia', serif;
+}
+
+.temple-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.temple-card:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.temple-card h3 {
+    font-size: 28px;
+    color: #FF5722;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.temple-card p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .temples {
+        padding: 20px;
+    }
+
+    .temple-card {
+        padding: 20px;
+    }
+
+    .temples h1 {
+        font-size: 28px;
+    }
+
+    .temple-card h3 {
+        font-size: 22px;
+    }
+
+    .temple-card p {
+        font-size: 16px;
+    }
+}
+
+/* متاحف */
+.museums {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.museums h1 {
+    font-size: 36px;
+    color: #2C3E50;
+    margin-bottom: 40px;
+    font-family: 'Georgia', serif;
+}
+
+.museum-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.museum-card:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.museum-card h3 {
+    font-size: 28px;
+    color: #FF5722;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.museum-card p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .museums {
+        padding: 20px;
+    }
+
+    .museum-card {
+        padding: 20px;
+    }
+
+    .museums h1 {
+        font-size: 28px;
+    }
+
+    .museum-card h3 {
+        font-size: 22px;
+    }
+
+    .museum-card p {
+        font-size: 16px;
+    }
+}
+
+/* تنسيق الفترات التاريخية*/
+.history-periods {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.history-periods h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.period {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.period:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.period h3 {
+    font-size: 1.8rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+.period p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .history-periods h2 {
+        font-size: 2rem;
+    }
+
+    .period {
+        padding: 20px;
+    }
+}
+/* تنسيق الشخصيات التاريخية*/
+.historical-figures {
+    padding: 40px 20px;
+}
+
+.historical-figures h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.figure {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.figure h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.figure p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    text-align: center;
+
+}
+
+@media (max-width: 768px) {
+    .historical-figures h2 {
+        font-size: 2rem;
+    }
+
+    .figure {
+        padding: 20px;
+    }
+}
+/* تنسيق الحروب والصراعات */
+.historical-wars {
+    padding: 40px 20px;
+}
+
+.historical-wars h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.war {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.war:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.war h3 {
+    font-size: 1.8rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.war p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    text-align: center;
+
+}
+
+@media (max-width: 768px) {
+    .historical-wars h2 {
+        font-size: 2rem;
+    }
+
+    .war {
+        padding: 20px;
+    }
+}
+/* تنسيق الآثار والترااث المصري */
+.egyptian-heritage {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.egyptian-heritage h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.heritage {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heritage:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.heritage h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.heritage p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    text-align: center;
+
+}
+
+@media (max-width: 768px) {
+    .egyptian-heritage h2 {
+        font-size: 2rem;
+    }
+
+    .heritage {
+        padding: 20px;
+    }
+}
+/* القلعه */
+.castles {
+    padding: 40px 20px;
+    text-align: center; /* محاذاة النص في المنتصف */
+}
+
+.castles h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* محاذاة العنوان في المنتصف */
+}
+
+.castle {
+    display: flex;
+    flex-direction: column; /* جعل الصورة والنص في عمود واحد في حال الشاشات الصغيرة */
+    align-items: center; /* محاذاة المحتوى بشكل أفقي في المنتصف */
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* محاذاة النصوص داخل القلعة في المنتصف */
+}
+
+.castle:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.castle-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 600px; /* تعديل عرض الصورة لتتناسب مع المساحة */
+    margin-bottom: 20px; /* إضافة مسافة بين الصورة والنص */
+}
+
+.castle-info {
+    flex: 1;
+    margin-left: 0;
+    text-align: center; /* محاذاة النصوص داخل معلومات القلعة في المنتصف */
+}
+
+.castle-info h3 {
+    font-size: 1.8rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+.castle-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px; /* مسافة بين الفقرات */
+}
+
+@media (max-width: 768px) {
+    .castle {
+        flex-direction: column; /* تأكيد عرض الصور والنصوص عموديًا في الشاشات الصغيرة */
+        text-align: center; /* تأكيد محاذاة النص في المنتصف */
+    }
+
+    .castle-img {
+        max-width: 100%; /* تأكيد أن الصورة ستأخذ عرضًا كاملًا في الشاشات الصغيرة */
+        margin-bottom: 20px;
+    }
+
+    .castle-info {
+        margin-left: 0;
+    }
+
+    .castles h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+/* إعدادات الخطوط الأساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* أسلوب الـ footer */
+.footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding-top: 40px;
+}
+
+/* الجزء العلوي من الـ footer */
+.footer-top {
+    background-color: #222;
+}
+
+.footer-top .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+/* تأثير حركة عند التمرير */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .bounce:hover {
+    animation: bounce 0.5s ease-in-out;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-logo {
+    flex: 1 1 250px;
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    color: #aaa;
+    font-size: 14px;
+    max-width: 300px;
+}
+
+/* تنسيق القائمة داخل footer */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    flex: 2;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    color: #ffab00;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffab00;
+}
+
+/* تنسيق أيقونات التواصل الاجتماعي */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links .social-icon {
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+    transform: scale(1.2);
+    color: #ffab00;
+}
+
+/* الجزء السفلي من الـ footer */
+.footer-bottom {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.footer-bottom p a {
+    color: #ffab00;
+    text-decoration: none;
+}
+
+.footer-bottom p a:hover {
+    color: #fff;
+}
+
+/* تحسينات للاستجابة مع الهواتف المحمولة */
+@media (max-width: 768px) {
+    .footer-top .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-column {
+        text-align: center;
+        min-width: unset;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
+
+
